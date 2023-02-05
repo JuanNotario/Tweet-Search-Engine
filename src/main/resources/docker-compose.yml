@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  dev:
+    image: postgres:latest
+    restart: always
+    container_name: twitter-container
+    hostname: mytwitterdb
+    environment:
+      POSTGRES_DB: twitterdb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    volumes:
+      - /home/jnotario/pp/twitter-docker:/var/lib/postgresql/data
+    ports:
+      - "3030:5432"
+
+
+

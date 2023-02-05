@@ -1,0 +1,6 @@
+create table search_tweets_stats (
+    search_id serial,
+	twitter_user varchar(255) not null,
+	request_date varchar(255) not null,
+	response_date varchar(255) not null,
+	constraint TweetPK primary key (search_id));
