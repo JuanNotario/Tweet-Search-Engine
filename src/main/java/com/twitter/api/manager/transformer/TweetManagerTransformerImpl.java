@@ -2,9 +2,9 @@ package com.twitter.api.manager.transformer;
 
 import com.twitter.api.manager.model.idto.SearchTweetIDTO;
 import com.twitter.api.manager.model.odto.SearchTweetODTO;
-import com.twitter.api.mapper.TweetManagerMapper;
 import com.twitter.api.service.model.request.SearchTweetRequest;
 import com.twitter.api.service.model.response.SearchTweetRsp;
+import com.twitter.api.manager.transformer.mapper.TweetManagerMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 

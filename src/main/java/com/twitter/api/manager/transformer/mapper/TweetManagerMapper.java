@@ -1,4 +1,4 @@
-package com.twitter.api.mapper;
+package com.twitter.api.manager.transformer.mapper;
 
 import com.twitter.api.manager.model.idto.SearchTweetIDTO;
 import com.twitter.api.manager.model.odto.SearchTweetODTO;

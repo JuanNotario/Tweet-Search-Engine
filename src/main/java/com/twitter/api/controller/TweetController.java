@@ -28,8 +28,8 @@ public class TweetController {
 
     @GetMapping(value = "/searchTweet", produces = "application/json")
     @ApiOperation(value = "Search all tweets from an account in the last 7 days")
-    @ApiResponses(value = { @ApiResponse(code = 200, message = "Search Tweet success", response = SearchTweetRSRDTO.class), @ApiResponse(code = 500, message = "Internal Server Error",
-            response = ErrorRSRDTO.class) })
+    @ApiResponses(value = { @ApiResponse(code = 200, message = "Search Tweet success", response = SearchTweetRSRDTO.class),
+            @ApiResponse(code = 500, message = "Internal Server Error", response = ErrorRSRDTO.class) })
     public ResponseEntity<SearchTweetRSRDTO> searchTweet(@Valid SearchTweetRQRDTO searchTweetRQRDTO) {
         val searchTweetIDTO = tweetControllerTransformer.toSearchTweetIDTO(searchTweetRQRDTO);
         val searchTweetODTO = tweetManager.searchTweet(searchTweetIDTO);
