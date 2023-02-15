@@ -4,6 +4,7 @@ import com.twitter.api.manager.model.idto.SearchTweetIDTO;
 import com.twitter.api.manager.model.odto.SearchTweetODTO;
 import com.twitter.api.manager.transformer.TweetManagerTransformer;
 import com.twitter.api.persistence.dao.SearchTweetStatsDao;
+import com.twitter.api.persistence.dao.TweetsRspStatsDao;
 import com.twitter.api.service.TwitterApiService;
 import com.twitter.api.service.model.request.SearchTweetRequest;
 import com.twitter.api.service.model.response.SearchTweetRsp;
@@ -33,6 +34,9 @@ public class TweetManagerImplTest {
     @Mock
     private SearchTweetStatsDao searchTweetStatsDao;
 
+    @Mock
+    private TweetsRspStatsDao tweetsRspStatsDao;
+
     @Test
     public void searchTweetTest() {
         when(tweetManagerTransformer.toSearchTweetRequest(any())).thenReturn(new SearchTweetRequest());
@@ -44,5 +48,4 @@ public class TweetManagerImplTest {
         verify(twitterApiService).apiTwitterCall(any());
         verify(searchTweetStatsDao).save(any());
     }
-
 }
