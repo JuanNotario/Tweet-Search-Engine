@@ -11,6 +11,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
@@ -23,6 +24,7 @@ import static org.mockito.Mockito.when;
 import static org.springframework.http.ResponseEntity.ok;
 import static org.springframework.test.util.ReflectionTestUtils.setField;
 
+@ActiveProfiles("test")
 @ExtendWith(MockitoExtension.class)
 class TwitterApiServiceImplTest {
 

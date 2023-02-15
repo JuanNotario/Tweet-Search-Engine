@@ -15,5 +15,19 @@ services:
     ports:
       - "3030:5432"
 
+  mongo:
+    image: mongo:latest
+    restart: always
+    container_name: mongo-container
+    hostname: mytwitterMongo
+    environment:
+      MONGO_INITDB_DATABASE: twitter_mongo
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    volumes:
+      - /home/jnotario/pp/twitter-mongo-docker:/data/db
+    ports:
+      - "4040:27017"
+
 
 
